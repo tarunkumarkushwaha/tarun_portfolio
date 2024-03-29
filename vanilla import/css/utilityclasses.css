@@ -1,0 +1,142 @@
+/* css testing file  */
+
+.sticky{
+  position: sticky;
+  z-index: 2;
+  top: 0%;
+}
+
+.skills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding-inline: 20px;
+}
+
+.skillnameshead{
+  background-color: #536886;
+  margin-inline: auto;
+  width: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.skill-card{
+  border: 2px solid rgb(133, 133, 146);
+  background-color: #ddd;
+  color: black;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+  height: 115px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutme{
+  margin: 80px;
+}
+
+
+
+.pageLayout, .centerContent {
+  min-height: auto;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-center {
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+.mySlides {
+  display: none
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.active{
+  background-color: #717171;
+}
+
+/* progress  */
+
+#Progress_Status {
+  width: 50%;
+  background-color: #ddd;
+}
+  
+#myprogressBar {
+  width: 1%;
+  height: 35px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 32px;
+  color: black;
+}

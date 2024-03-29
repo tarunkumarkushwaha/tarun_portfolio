@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: large;
+  box-sizing: border-box;
+  /* background-color: rgb(23, 23, 121); */
+}
+
+.intro {
+  background-image: url("https://github.com/tarunkumarkushwaha/TradeG/raw/master/Img/programming-unsplash.jpg");
+  background-repeat: no-repeat;
+  /* background-color: #13151c; */
+}
+
+/* MENU */
+
+.article-nav-container {
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+.menu-items {
+  display: flex;
+  background-color: #3a3a3a38;
+  margin-inline: auto;
+  padding-inline: 20px;
+  overflow: auto;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+/* MENU END */
+
+.introcontainer {
+  background-color: #0f0f0fab;
+  margin-inline: auto;
+  padding: 250px;
+  text-align: center;
+  color: white;
+}
+
+.sub-heading {
+  margin-inline: auto;
+  border-radius: 25px;
+  background-color: rgb(23, 23, 121);
+  width: 75%;
+  color: #ddd;
+  padding: 15px;
+  display: block;
+}
+
+.contact-heading {
+  border-radius: 25px;
+  background-color: rgb(23, 23, 121);
+  color: #ddd;
+  padding: 15px;
+  display: block;
+}
+
+.projectcardcontainer {
+  z-index: 1;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.projectcard {
+  border: 2px solid rgb(133, 133, 146);
+  background-color: #ddd;
+  border-radius: 25px;
+  padding: 15px;
+  margin: 15px;
+  height: 350px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.274);
+  color: aliceblue;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.274);
+  cursor: pointer;
+}
+
+.button:hover,
+a:hover,
+.on {
+  background-color: rgb(1, 50, 156);
+  transition: 0.6s ease;
+}
+
+.button:active,
+a:active {
+  background-color: rgb(1, 24, 75);
+  transition: 0.6s ease;
+}
+
+.project,.about {
+  color: #ddd;
+}
+
+.cardimg {
+  border: 2px solid rgb(133, 133, 146);
+  border-radius: 25px;
+  height: 100px;
+  width: 50%;
+}
+
+.cursivetext {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: xx-large;
+  font-weight: lighter;
+}
+
+/* progress card  */
+
+.progress-wrap {
+  width: 100%;
+  
+  float: left;
+  margin-bottom: 10px;
+}
+
+.progress-bar{
+  background-color: rgba(100, 1, 14, 0.801);
+  height: 4px;
+}
+
+.progress {
+  background-color: rgb(217, 250, 239);
+  width: 100%;
+  float: left;
+  height: 5px;
+  box-shadow: none;
+}
+
+.progress-container{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.contact {
+  color: #ddd;
+  height: 100vh;
+  padding: 200px;
+}
+
+/* custom scroll bar  */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(133, 167, 241);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1d375f;
+}
+
+/* css testing file  */
+
+.sticky{
+  position: sticky;
+  z-index: 2;
+  top: 0%;
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding-inline: 20px;
+}
+
+.skillnameshead{
+  background-color: #536886;
+  margin-inline: auto;
+  width: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.skill-card{
+  border: 2px solid rgb(133, 133, 146);
+  background-color: #ddd;
+  color: black;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+  height: 115px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutme{
+  margin: 80px;
+}
+
+
+
+.pageLayout, .centerContent {
+  min-height: auto;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-center {
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+.mySlides {
+  display: none
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.active{
+  background-color: #717171;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .article-nav-container {
+    position: static;
+  }
+
+  .nav-toggle:checked~.menu-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-items {
+    display: none;
+    position: relative;
+  }
+
+
+  .menu-btn {
+    display: inline-block;
+    align-self: center;
+    margin-left: 20px;
+  }
+
+  .intro {
+    max-width: 1300px;
+    margin-inline: auto;
+    padding: 100px;
+    text-align: center;
+    color: white;
+  }
+
+  .top {
+    display: none;
+  }
+
+  .svg1 {
+    height: 25vh;
+    width: 50hw;
+    margin: 25px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text {
+    font-size: 11px
+  }
+
+  .contact {
+    padding: 50px;
+  }
+}

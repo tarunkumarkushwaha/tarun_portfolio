@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tarun portfolio</title>
+  <link rel="shortcut icon" href="Img\favicon.ico" type="image/x-icon">
+  <link href="css\style.css" rel="stylesheet" type="text/css" />
+  <link href="css\utilityclasses.css" rel="stylesheet" type="text/css" />
+</head>
+<script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="sticky">
+    <div class="article-nav-container">
+      <div class="article-nav">
+        <input type="checkbox" class="nav-toggle" id="nav-toggle">
+        <label for="nav-toggle" class="menu-btn">
+          <img src="Img\menu.png" alt="menu">.
+        </label>
+        <div class="menu-items">
+          <div class="button" onclick="location.href='index.html';">Home</div>
+          <div class="button aboutbtn" onclick="showabout()">About</div>
+          <div class="button projectsbtn" onclick="showproject()">Projects</div>
+          <div class='button contactbtn' onclick="showcontact()">Contact me</div>
+          <button type="button" onclick="showresume()" class="button">Resume</button>
+          <!-- <button type="button" onclick="test()" class="button">Test</button> -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="introcontainer">
+      <div class="intro">
+        <h1 class="cursivetext margin10">Hi I'm <strong><span class="cursivetext">Tarun kushwaha</span></strong></h1>
+        <p class="cursivetext margin10">Front-End Developer</p>
+      </div>
+    </div>
+
+    <div class="about">
+      <h2 class="align-center sub-heading">About me</h2>
+      <p class="align-center aboutme">learned web development on my own. Since beginning i am continously working on
+        learning new technologies to be revalent to current requirements.I have worked
+        as an frontend intern at S7works for 1 year. During that i have worked on 2 projects.
+        Prior to my past job, I've created 6 projects on my own.
+      </p>
+
+      <div class="align-center skillnameshead">
+        <h2>Core Competencies</h2>
+      </div>
+      <div class="skills">
+        <div class="progress-container">
+          <div class="progress-wrap">
+            <div><span style="float: left">HTML</span><span style= "float: right">90%</span></div>
+            <div class="progress">
+              <div class="progress-bar" style=" width: 90%">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="align-center">HTML</p>
+          <!-- <div id="Progress_Status">
+          <div id="myprogressBar"></div>
+        </div> -->
+        </div>
+        <div class="skill-card">
+          <p class="align-center">CSS</p>
+          <!-- <div id="Progress_Status">
+          <div id="myprogressBar"></div>
+        </div> -->
+        </div>
+        <div class="skill-card">
+          <p class="align-center">JavaScript</p>
+          <!-- <div id="Progress_Status">
+          <div id="myprogressBar"></div>
+        </div> -->
+        </div>
+        <div class="skill-card">
+          <p class="align-center">Github</p>
+          <!-- <div id="Progress_Status">
+          <div id="myprogressBar"></div>
+        </div> -->
+        </div>
+        <div class="skill-card">
+          <p class="align-center">Reactjs</p>
+          <!-- <div id="Progress_Status">
+          <div id="myprogressBar"></div>
+        </div> -->
+        </div>
+        <div class="skill-card">
+          <p class="align-center">Nextjs</p>
+          <!-- <div id="Progress_Status">
+          <div id="myprogressBar"></div>
+        </div> -->
+        </div>
+        <div class="skill-card">
+          <p class="align-center">Tailwind</p>
+          <!-- <div id="Progress_Status">
+          <div id="myprogressBar"></div>
+        </div> -->
+        </div>
+        <div class="skill-card">
+          <p class="align-center">Bootstrap</p>
+          <!-- <div id="Progress_Status">
+          <div id="myprogressBar"></div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="projects">
+      <h2 class="sub-heading flex-row-center align-center">My projects</h2>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="projectcardcontainer">
+            <div class="projectcard">
+              <img class="cardimg" src="Img\Utilitybox.png" alt="Utilitybox">
+              <h3 class="align-center margin10">Utility Box</h3>
+              <p class="align-center margin10">utility box is a multi-purpose web app. It has many useful features
+                like
+                notepad, calculator, and todos.</p>
+                <a class="button" target="_blank" rel="noopener" href="https://utilityboxreactor.netlify.app/">View Project</a>
+            </div>
+            <div class="projectcard">
+              <img class="cardimg" src="Img\Quiztime.png" alt="QuizTime">
+              <h3 class="align-center margin10">QuizTime</h3>
+              <p class="align-center margin10">quiz time is a web app to test your JavaScript knowledge with
+                features including saving past results, improvement calculator, etc.</p>
+                <a class="button" target="_blank" rel="noopener" href="https://quiztimejavascripttests.netlify.app/">View Project</a>
+            </div>
+            <div class="projectcard">
+              <img class="cardimg" src="Img\movieselector.png" alt="movieselector">
+              <h3 class="align-center margin10">Movie selector</h3>
+              <p class="align-center margin10">Movie and show description site with details fetched from free API</p>
+              <a class="button" target="_blank" rel="noopener" href="https://selectyourshow.netlify.app/">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <div class="projectcardcontainer">
+            <div class="projectcard">
+              <img class="cardimg" src="Img\Netdictionary.png" alt="Net dictionary">
+              <h3 class="align-center margin10">Net dictionary</h3>
+              <p class="align-center margin10">It is a Dictionary app that uses free Dictionary api</p>
+              <a class="button" target="_blank" rel="noopener" href="https://tarunkumarkushwaha.github.io/DictionarYonWEB/">View Project</a>
+            </div>
+            <div class="projectcard">
+              <img class="cardimg" src="Img\Streamflowz.png" alt="Streamflowz">
+              <h3 class="align-center margin10">Streamflowz</h3>
+              <p class="align-center margin10">It is a music player which a well-designed UI.</p>
+              <a class="button" target="_blank" rel="noopener" href="https://streamflowzz.netlify.app/">View Project</a>
+            </div>
+            <div class="projectcard">
+              <img class="cardimg" src="Img\Funphoto.png" alt="Funphoto">
+              <h3 class="align-center margin10">Funphoto</h3>
+              <p class="align-center margin10">Funphoto is a free Unsplash image site. It has a search option to
+                search in
+                various categories.</p>
+                <a class="button" target="_blank" rel="noopener" href="https://tarunkumarkushwaha.github.io/imagegenerator.github.io/">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <div class="projectcardcontainer">
+            <div class="projectcard">
+              <img class="cardimg" src="Img\Clockbox.png" alt="Clockbox">
+              <h3 class="align-center margin10">Clockbox</h3>
+              <p class="align-center margin10">clock box is a alarm clock app</p>
+              <a class="button" target="_blank" rel="noopener" href="https://clockbox.netlify.app/">View Project</a>
+            </div>
+            <!-- <div class="projectcard">
+              <img class="cardimg" src="Img\Clockbox.png" alt="#">
+              <h3 class="align-center margin10">Clockbox</h3>
+              <p class="align-center margin10">clock box </p>
+            </div>
+            <div class="projectcard">
+              <img class="cardimg" src="Img\Funphoto.png" alt="#">
+              <h3 class="align-center margin10">Funphoto</h3>
+              <p class="align-center margin10">Funphoto is a free Unsplash image site. It has a search option to
+                search in
+                various categories.</p>
+            </div> -->
+          </div>
+        </div>
+
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+    </div>
+
+    <div class="contact">
+      <h2 class="align-center contact-heading">Contact</h2>
+      <h2 class="align-center margin10">feel free to contact me</h2>
+      <p class="align-center margin10">tkk.tarunkushwaha05@gmail.com</p>
+      <p class="align-center margin10">mobile - 7400744121</p>
+    </div>
+    </div>
+  </main>
+
+  <div class="align-center bolder">
+    &copy; 2023 Tarun
+  </div>
+</body>
+
+</html>
