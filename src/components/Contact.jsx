@@ -1,11 +1,12 @@
+import portfolioData from "../data/PortfolioData.js"
 const Contact = () => {
   return (
-    <><div className="contact bg-slate-900">
-    <h2 className="align-center contact-heading">Contact</h2>
-    <h2 className="align-center margin10">feel free to contact me</h2>
-    <p className="align-center margin10">tkk.tarunkushwaha05@gmail.com</p>
-    <p className="align-center margin10">mobile - 7400744121</p>
-  </div></>
+    <><div className="text-slate-100">
+      <h1 className="text-center text-slate-200 p-10 text-3xl">contact</h1>
+      <h1 className="text-center text-slate-300 p-3 text-xl">feel free to contact me</h1>
+      <p className="text-center p-3">{portfolioData.contact.email}</p>
+      <p className="text-center p-3">mobile - {portfolioData.contact.phone}</p>
+    </div></>
   )
 }
 

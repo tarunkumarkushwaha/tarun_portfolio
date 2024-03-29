@@ -1,8 +1,9 @@
+import portfolioData from "../data/PortfolioData.js"
 const Foot = () => {
   return (
     <>
-      <div className="align-center bolder">
-        &copy; 2023 Tarun
+      <div className="text-center bg-blue-950 text-slate-100 font-light">
+        &copy; 2024 {portfolioData.name}
       </div>
     </>
   )

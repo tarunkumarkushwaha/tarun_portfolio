@@ -1,12 +1,14 @@
+import portfolioData from "../data/PortfolioData.js"
 const Home = () => {
   return (
     <>
-    <div className="intro">
-      <div className="introcontainer bg-contain">
-        <h1 className="cursivetext margin10">Hi I am <strong><span className="cursivetext">Tarun kushwaha</span></strong></h1>
-        <p className="cursivetext margin10">Front-End Developer</p>
+      <div className="intro-bg mb-24">
+        <div className="intro-wrapper bg-contain">
+          <h1 className="text-4xl font-medium p-4">Hi I am <strong><span className="text-4xl font-medium">{portfolioData.name}</span></strong>
+          </h1>
+          <p className="text-4xl font-medium p-4">Front-End Developer</p>
+        </div>
       </div>
-    </div>
     </>
   )
 }
