@@ -80,6 +80,7 @@ const portfolioData = {
             projectname: "Utility Box",
             description: "utility box is a multi-purpose web app. It has many useful features like notepad, calculator, and todos",
             liveurl: "https://utilityboxreactor.netlify.app/",
+            imagesrc : "src/assets/Img/Utilitybox.png",
             serialno: 1,
             techstackused: "react, tailwind, css"
         },
@@ -87,6 +88,7 @@ const portfolioData = {
             projectname: "Quiz Time",
             description: "quiz time is a web app to test your JavaScript knowledge with features including improvement calculator",
             liveurl: "https://quiztimejavascripttests.netlify.app/",
+            imagesrc : "src/assets/Img/Quiztime.png",
             serialno: 2,
             techstackused: "html, js, css"
         },
@@ -94,6 +96,7 @@ const portfolioData = {
             projectname: "Quiz OTG",
             description: "Quiz otg is a test app which lets you customise your test and questions",
             liveurl: "https://quizotg.netlify.app/",
+            imagesrc : "src/assets/Img/Quiztime.png",
             serialno: 3,
             techstackused: "react, tailwind, css"
         },
@@ -101,15 +104,17 @@ const portfolioData = {
             projectname: "Movie selector",
             description: "Movie and show description site with details fetched from free API",
             liveurl: "https://selectyourshow.netlify.app/",
+            imagesrc : "src/assets/Img/movieselector.png",
             serialno: 4,
             techstackused: "react, css"
         },
         {
-            projectname: "",
-            description: "",
-            liveurl: "",
+            projectname: "streamflowzz",
+            description: "online music player",
+            liveurl: "https://streamflowzz.netlify.app/",
+            imagesrc : "src/assets/Img/Streamflowz.png",
             serialno: 5,
-            techstackused: ""
+            techstackused: "html css js"
         },
     ],
     contact: {
