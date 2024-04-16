@@ -30,7 +30,7 @@ function App() {
       {portfolioData ?
         <Context.Provider value={{ darkmode, setDarkmode }}>
           <Navbar skills={skills} home={home} about={about} contact={contact} projects={projects} />
-          <main className={`${darkmode ? "bg-slate-900" : "bg-slate-600"}`}>
+          <main className={`${darkmode ? "bg-slate-900" : "bg-blue-300"}`}>
             <Home ref={home} />
             <About ref={about} />
             <Skills ref={skills} />
@@ -38,7 +38,7 @@ function App() {
             <Contact ref={contact} />
           </main>
           <Foot />
-          <Scroll />
+          <Scroll home={home} />
         </Context.Provider>
         :
         <div className='flex p-[50vh] flex-row justify-center'>

@@ -1,3 +1,10 @@
+import Quiztime from '../assets/Img/Quiztime.png';
+import Utilitybox from '../assets/Img/Utilitybox.png';
+import movieselector from '../assets/Img/movieselector.png';
+import Streamflowz from '../assets/Img/Streamflowz.png';
+import quizotg from '../assets/Img/quizotg.png';
+
+
 const portfolioData = {
     name : "Tarun kushwaha",
     profession:"Front-End Developer",
@@ -80,7 +87,7 @@ const portfolioData = {
             projectname: "Utility Box",
             description: "utility box is a multi-purpose web app. It has many useful features like notepad, calculator, and todos",
             liveurl: "https://utilityboxreactor.netlify.app/",
-            imagesrc : "src/assets/Img/Utilitybox.png",
+            imagesrc : Utilitybox,
             serialno: 1,
             techstackused: "react, tailwind, css"
         },
@@ -88,7 +95,7 @@ const portfolioData = {
             projectname: "Quiz Time",
             description: "quiz time is a web app to test your JavaScript knowledge with features including improvement calculator",
             liveurl: "https://quiztimejavascripttests.netlify.app/",
-            imagesrc : "src/assets/Img/Quiztime.png",
+            imagesrc : Quiztime,
             serialno: 2,
             techstackused: "html, js, css"
         },
@@ -96,7 +103,7 @@ const portfolioData = {
             projectname: "Quiz OTG",
             description: "Quiz otg is a test app which lets you customise your test and questions",
             liveurl: "https://quizotg.netlify.app/",
-            imagesrc : "src/assets/Img/Quiztime.png",
+            imagesrc : quizotg,
             serialno: 3,
             techstackused: "react, tailwind, css"
         },
@@ -104,7 +111,7 @@ const portfolioData = {
             projectname: "Movie selector",
             description: "Movie and show description site with details fetched from free API",
             liveurl: "https://selectyourshow.netlify.app/",
-            imagesrc : "src/assets/Img/movieselector.png",
+            imagesrc : movieselector,
             serialno: 4,
             techstackused: "react, css"
         },
@@ -112,7 +119,7 @@ const portfolioData = {
             projectname: "streamflowzz",
             description: "online music player",
             liveurl: "https://streamflowzz.netlify.app/",
-            imagesrc : "src/assets/Img/Streamflowz.png",
+            imagesrc : Streamflowz,
             serialno: 5,
             techstackused: "html css js"
         },

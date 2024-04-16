@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
+import useScroll from '../customhooks/useScroll';
 
-const Scroll = () => {
+const Scroll = ({home}) => {
     const [scrollPercentage, setScrollPercentage] = useState(0);
 
     const backTopBtn = useRef();
-    
+
     useEffect(() => {
         const handleScroll = () => {
             const bodyHeight = document.body.scrollHeight;
@@ -27,7 +28,8 @@ const Scroll = () => {
     }, []);
     return (
         <>
-            <a href="#top" className="back-top-btn rounded-full text-slate-500" aria-label="back to top" ref={backTopBtn}>{scrollPercentage}%</a>
+            <div onClick={()=>home.current.scrollIntoView()} className="back-top-btn rounded-xl text-slate-100" aria-label="back to top"
+             ref={backTopBtn}>{scrollPercentage}%</div>
         </>
     )
 }
