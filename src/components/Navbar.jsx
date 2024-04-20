@@ -19,6 +19,7 @@ const Navbar = ({ skills, home, about, contact, projects }) => {
               <div onClick={() => skills.current.scrollIntoView()} className='button contactbtn'>Skills</div>
               <div onClick={() => projects.current.scrollIntoView()} className="button projectsbtn">Projects</div>
               <div onClick={() => contact.current.scrollIntoView()} className='button contactbtn'>Contact</div>
+              <a target="_blank" href="https://github.com/tarunkumarkushwaha" className='button contactbtn'>GitHub</a>
               {/* <button type="button" className="button">Resume</button> */}
               <button onClick={() => {
                 darkmode ? localStorage.setItem('Theme', JSON.stringify(false)) : localStorage.setItem('Theme', JSON.stringify(true));

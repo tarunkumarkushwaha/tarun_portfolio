@@ -16,7 +16,6 @@ const Skills = forwardRef((prop, ref) => {
       }
     // }
     //  else {
-      
     // }
   }
 
