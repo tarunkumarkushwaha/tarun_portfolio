@@ -3,6 +3,7 @@ import Utilitybox from '../assets/Img/Utilitybox.png';
 import movieselector from '../assets/Img/movieselector.png';
 import Streamflowz from '../assets/Img/Streamflowz.png';
 import quizotg from '../assets/Img/quizotg.png';
+import Funphoto from '../assets/Img/Funphoto.png';
 
 
 const portfolioData = {
@@ -120,6 +121,14 @@ const portfolioData = {
             description: "online music player",
             liveurl: "https://streamflowzz.netlify.app/",
             imagesrc : Streamflowz,
+            serialno: 5,
+            techstackused: "html css js"
+        },
+        {
+            projectname: "Funphoto",
+            description: "get your favourite image using unsplash from funphoto",
+            liveurl: "https://tarunkumarkushwaha.github.io/imagegenerator.github.io/",
+            imagesrc : Funphoto,
             serialno: 5,
             techstackused: "html css js"
         },

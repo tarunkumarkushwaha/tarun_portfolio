@@ -17,7 +17,7 @@ const useScroll = (ref, className, elem) => {
             3: ref.current.childNodes[1],
             4: ref.current.nextSibling,
         }
-        const elementIsInScreen = ref.current.getBoundingClientRect().top < window.innerHeight / 1.15;
+        const elementIsInScreen = ref.current.getBoundingClientRect().top < window.innerHeight / 1.1;
         if (elementIsInScreen) {
             elementtype[elem].classList.add(className);
         } else {

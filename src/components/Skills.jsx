@@ -29,7 +29,7 @@ const Skills = forwardRef((prop, ref) => {
   return (
     <>
       <div ref={ref}></div>
-      <h1 className={` ${darkmode ? "text-slate-200" : "text-slate-800"} mt-16 p-10 text-3xl text-center`}>Skills</h1>
+      <h1 className={` ${darkmode ? "text-slate-200" : "text-slate-800"} mt-16 p-10 text-2xl font-extrabold leading-none tracking-tight md:text-3xl lg:text-4xl text-center`}>Skills</h1>
       <div className="mx-auto px-4 w-2/3 flex flex-col justify-center items-center">
         {portfolioData.skillsSet.map((item, index) => {
           return <div key={index} className="w-full mb-4">
