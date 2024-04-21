@@ -6,7 +6,7 @@ import { duration } from "@mui/material";
 const Skills = forwardRef((prop, ref) => {
   const [position, setposition] = useState(false)
   const { darkmode } = useContext(Context);
-  console.log(position)
+  // console.log(position)
 
   const scrollFill = function () {
     let currentposition = ref.current.getBoundingClientRect().top
@@ -20,22 +20,20 @@ const Skills = forwardRef((prop, ref) => {
     return () => window.removeEventListener('scroll', scrollFill);
   }, []);
 
-  // useEffect(() => {
-  //   if (position) {
-  //     let targetWidth = portfolioData.skillsSet[0].percentage
-  //     for (let index = 0; index < portfolioData.skillsSet.length; index++) {
-  //       let progressWidth
-  //       const intervalId = setInterval(() => {
-  //         progressWidth = progressWidth + 1
-  //         if (progressWidth >= targetWidth) clearInterval(intervalId);
-  //       }, 1000);
-  //       console.log(progressWidth)
-  //       return () => clearInterval(intervalId);
-        
-  //       // console.log(ref.current.nextSibling.nextSibling.childNodes[index].childNodes[1].childNodes[0])
-  //     }
-  //   }
-  // }, [position]);
+  useEffect(() => {
+    if (position) {
+      for (let index = 0; index < portfolioData.skillsSet.length; index++) {
+        let targetWidth = portfolioData.skillsSet[index].percentage
+        let progressWidth = 0
+        const intervalId = setInterval(() => {
+          progressWidth = progressWidth + 1
+          if (progressWidth >= targetWidth) clearInterval(intervalId);
+          ref.current.nextSibling.nextSibling.childNodes[index].childNodes[1].childNodes[0].style.width = progressWidth + "%"
+          // console.log(progressWidth,portfolioData.skillsSet[index].name)
+        }, 25);
+      }
+    }
+  }, [position]);
 
   return (
     <>
@@ -48,7 +46,7 @@ const Skills = forwardRef((prop, ref) => {
               <span className={`${darkmode ? "text-slate-200" : "text-slate-800"} pt-4`} style={{ float: "left" }}>{item.name}</span>
               <span className={`${darkmode ? "text-slate-200" : "text-slate-800"} pt-4`} style={{ float: "right" }}>{item.percentage}%</span></div>
             <div className="h-2 w-full rounded-md bg-slate-100 border border-black">
-              <div className={`h-[6px] rounded-md ${darkmode ? "bg-blue-500" : "bg-blue-800"}`} style={{ width: item.percentage + '%' }}>
+              <div className={`h-[6px] rounded-md ${darkmode ? "bg-blue-500" : "bg-blue-800"}`} >
               </div>
             </div>
           </div>
