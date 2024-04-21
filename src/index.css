@@ -41,84 +41,100 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 15px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(133, 167, 241);
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #1d375f;
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(133, 167, 241);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1d375f;
+}
+
+.left-side-entry {
+  animation-name: sideentry;
+  animation-duration: 1.5s;
+}
+
+@keyframes sideentry {
+  0% {
+    transform: translate(-100px, 0);
+    opacity: 0;
   }
 
-  .left-side-entry {
-    animation-name: sideentry;
-    animation-duration: 1.5s;
+  100% {
+    transform: translate(0px, 0);
+    opacity: 1;
   }
-  
-  @keyframes sideentry {
-    0% {
-      transform: translate(-100px, 0);
-      opacity: 0;
-    }
-  
-    100% {
-      transform: translate(0px, 0);
-      opacity: 1;
-    }
+}
+
+.right-side-entry {
+  animation-name: rightentry;
+  animation-duration: 1.5s;
+}
+
+@keyframes rightentry {
+  0% {
+    transform: translate(100px, 0);
+    opacity: 0;
   }
 
-  .right-side-entry {
-    animation-name: rightentry;
-    animation-duration: 1.5s;
+  100% {
+    transform: translate(0px, 0);
+    opacity: 1;
   }
-  
-  @keyframes rightentry {
-    0% {
-      transform: translate(100px, 0);
-      opacity: 0;
-    }
-  
-    100% {
-      transform: translate(0px, 0);
-      opacity: 1;
-    }
+}
+
+.smooth-entry {
+  animation-name: entry;
+  animation-duration: 1.5s;
+}
+
+@keyframes entry {
+  0% {
+    opacity: 0;
   }
 
-  .smooth-entry {
-    animation-name: entry;
-    animation-duration: 1.5s;
+  100% {
+    opacity: 1;
   }
-  
-  @keyframes entry {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
+}
+
+.smooth-fill {
+  animation-name: filler;
+  animation-duration: 1.5s;
+}
+
+@keyframes filler {
+  0% {
+    width: 0%;
   }
 
-  @keyframes cursor-blink {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
   }
 
-  .blink{
-    animation: cursor-blink 0.8s infinite;
+  100% {
+    opacity: 1;
   }
+}
+
+.blink {
+  animation: cursor-blink 0.8s infinite;
+}

@@ -1,30 +1,41 @@
 import { forwardRef, useContext, useEffect, useState } from "react"
 import portfolioData from "../data/PortfolioData.js"
 import { Context } from "../MyContext";
+import { duration } from "@mui/material";
 
 const Skills = forwardRef((prop, ref) => {
-  const [skillPercent, setskillPercent] = useState(0)
+  const [position, setposition] = useState(false)
   const { darkmode } = useContext(Context);
+  console.log(position)
 
   const scrollFill = function () {
-    const elementIsInScreen = ref.current.getBoundingClientRect().top < window.innerHeight / 1.15;
-    
-    if (elementIsInScreen) {
-      //  skillPercent(item.percentage)
-    //   for (let index = 0; index < portfolioData.skillsSet.length; index++) {
-    //     console.log(ref.current.nextSibling.nextSibling.childNodes[index].childNodes[1].childNodes[0]) 
-      }
-    // }
-    //  else {
-    // }
+    let currentposition = ref.current.getBoundingClientRect().top
+    setposition(currentposition < window.innerHeight / 1.15 && currentposition + window.innerHeight > 0)
   }
 
+  useEffect(() => {
+    scrollFill();
+    window.removeEventListener('scroll', scrollFill);
+    window.addEventListener('scroll', scrollFill, { passive: true });
+    return () => window.removeEventListener('scroll', scrollFill);
+  }, []);
+
   // useEffect(() => {
-  //   scrollFill();
-  //   window.removeEventListener('scroll', scrollFill);
-  //   window.addEventListener('scroll', scrollFill, { passive: true });
-  //   return () => window.removeEventListener('scroll', scrollFill);
-  // }, []);
+  //   if (position) {
+  //     let targetWidth = portfolioData.skillsSet[0].percentage
+  //     for (let index = 0; index < portfolioData.skillsSet.length; index++) {
+  //       let progressWidth
+  //       const intervalId = setInterval(() => {
+  //         progressWidth = progressWidth + 1
+  //         if (progressWidth >= targetWidth) clearInterval(intervalId);
+  //       }, 1000);
+  //       console.log(progressWidth)
+  //       return () => clearInterval(intervalId);
+        
+  //       // console.log(ref.current.nextSibling.nextSibling.childNodes[index].childNodes[1].childNodes[0])
+  //     }
+  //   }
+  // }, [position]);
 
   return (
     <>
@@ -36,8 +47,8 @@ const Skills = forwardRef((prop, ref) => {
             <div className="pt-1">
               <span className={`${darkmode ? "text-slate-200" : "text-slate-800"} pt-4`} style={{ float: "left" }}>{item.name}</span>
               <span className={`${darkmode ? "text-slate-200" : "text-slate-800"} pt-4`} style={{ float: "right" }}>{item.percentage}%</span></div>
-            <div className="h-2 w-full bg-slate-100">
-              <div className={`h-2 ${darkmode ? "bg-blue-500" : "bg-blue-800"}`} style={{ width: item.percentage + '%' }}>
+            <div className="h-2 w-full rounded-md bg-slate-100 border border-black">
+              <div className={`h-[6px] rounded-md ${darkmode ? "bg-blue-500" : "bg-blue-800"}`} style={{ width: item.percentage + '%' }}>
               </div>
             </div>
           </div>

@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
-import useScroll from '../customhooks/useScroll';
+import React, { useEffect, useRef, useState,useContext } from 'react'
+import { Context } from "../MyContext";
 
 const Scroll = ({home}) => {
     const [scrollPercentage, setScrollPercentage] = useState(0);
-
+    const { darkmode } = useContext(Context);
     const backTopBtn = useRef();
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const Scroll = ({home}) => {
     }, []);
     return (
         <>
-            <div onClick={()=>home.current.scrollIntoView()} className="back-top-btn rounded-xl text-slate-100" aria-label="back to top"
+            <div onClick={()=>home.current.scrollIntoView()} className={`back-top-btn rounded-xl ${darkmode ? "text-slate-100" :"text-slate-950"}`} aria-label="back to top"
              ref={backTopBtn}>{scrollPercentage}%</div>
         </>
     )
