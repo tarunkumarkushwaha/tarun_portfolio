@@ -10,10 +10,7 @@ html {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-
-/*-----------------------------------*\
-  #BACK TO TOP
-\*-----------------------------------*/
+/* #BACK TO TOP */
 
 .back-top-btn {
   cursor: pointer;
@@ -43,7 +40,6 @@ html {
 }
 
 .menu-items {
-  /* display: flex; */
   background-color: #3a3a3a38;
   margin-inline: auto;
   padding-inline: 20px;
@@ -53,145 +49,109 @@ html {
   align-items: center;
 }
 
-.nav-toggle {
-  display: none;
-}
+/* main page  */
 
-.menu-btn {
-  display: none;
-}
-
-.menu-btn img {
-  width: 40px;
-  height: 40px;
-}
-
-
-
-/* css testing file  */
-
-.sticky{
-  position: sticky;
-  z-index: 2;
-  top: 0%;
-}
-
-.skills{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 20px;
-  padding-inline: 20px;
-}
-
-.skillnameshead{
-  background-color: #536886;
+.intro-wrapper {
+  background-color: #0f0f0fcc;
   margin-inline: auto;
-  width: 200px;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 10px;
-}
-
-.skill-card{
-  border: 2px solid rgb(133, 133, 146);
-  background-color: #ddd;
-  color: black;
-  border-radius: 10px;
-  padding: 15px;
-  margin: 15px;
-  height: 115px;
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-}
-
-.aboutme{
-  margin: 80px;
-}
-
-
-
-.pageLayout, .centerContent {
-  min-height: auto;
-}
-
-.flex-row-center {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  /* justify-content: center; */
-}
-
-.flex-column-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.align-center {
+  /* padding: 250px; */
   text-align: center;
-  align-self: center;
-  text-decoration: none;
-  justify-content: center;
-}
-
-.margin10 {
-  margin: 10px;
-}
-
-.mySlides {
-  display: none
-}
-
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
   color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+/* custom buttons */
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
+.button {
+  margin-block: 10px;
+  margin-inline: 2px;
+  padding: 15px;
+  width: 6rem;
+  border-radius: 25px;
+  background-color: rgba(130, 89, 245, 0.466);
+  color: aliceblue;
+  text-decoration: none;
   text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.274);
+  cursor: pointer;
 }
 
-.active{
-  background-color: #717171;
+.button:hover,
+.on {
+  background-color: rgb(0, 37, 116);
+  transition: 0.6s ease;
+}
+
+.button:active {
+  background-color: rgb(1, 24, 75);
+  transition: 0.6s ease;
+}
+
+/* custom scroll bar  */
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(133, 167, 241);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1d375f;
+}
+
+.left-side-entry {
+  animation-name: sideentry;
+  animation-duration: 1.5s;
+}
+
+@keyframes sideentry {
+  0% {
+    transform: translate(-100px, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0px, 0);
+    opacity: 1;
+  }
+}
+
+.smooth-entry {
+  animation-name: entry;
+  animation-duration: 1s;
+}
+
+@keyframes entry {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: cursor-blink 0.8s infinite;
 }

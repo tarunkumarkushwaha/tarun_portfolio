@@ -1,22 +1,11 @@
 import { forwardRef, useContext, useEffect, useState } from "react"
 import portfolioData from "../data/PortfolioData.js"
 import { Context } from "../MyContext";
+import useElementIsVisible from "../customhooks/useElementIsVisible.js";
 
 const Skills = forwardRef((prop, ref) => {
-  const [position, setposition] = useState(false)
   const { darkmode } = useContext(Context);
-
-  const scrollFill = function () {
-    let currentposition = ref.current.getBoundingClientRect().top
-    setposition(currentposition < window.innerHeight / 1.15 && currentposition + window.innerHeight > 0)
-  }
-
-  useEffect(() => {
-    scrollFill();
-    window.removeEventListener('scroll', scrollFill);
-    window.addEventListener('scroll', scrollFill, { passive: true });
-    return () => window.removeEventListener('scroll', scrollFill);
-  }, []);
+  let position = useElementIsVisible(ref)
 
   useEffect(() => {
     if (position) {
@@ -27,7 +16,6 @@ const Skills = forwardRef((prop, ref) => {
           progressWidth = progressWidth + 1
           if (progressWidth >= targetWidth) clearInterval(intervalId);
           ref.current.nextSibling.nextSibling.childNodes[index].childNodes[1].childNodes[0].style.width = progressWidth + "%"
-          // console.log(progressWidth,portfolioData.skillsSet[index].name)
         }, 25);
       }
     }
