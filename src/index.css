@@ -7,7 +7,7 @@
 .intro-wrapper {
   background-color: #0f0f0fcc;
   margin-inline: auto;
-  padding: 250px;
+  /* padding: 250px; */
   text-align: center;
   color: white;
 }
@@ -78,26 +78,9 @@
   }
 }
 
-.right-side-entry {
-  animation-name: rightentry;
-  animation-duration: 1.5s;
-}
-
-@keyframes rightentry {
-  0% {
-    transform: translate(100px, 0);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
-}
-
 .smooth-entry {
   animation-name: entry;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 @keyframes entry {
@@ -107,21 +90,6 @@
 
   100% {
     opacity: 1;
-  }
-}
-
-.smooth-fill {
-  animation-name: filler;
-  animation-duration: 1.5s;
-}
-
-@keyframes filler {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 100%;
   }
 }
 

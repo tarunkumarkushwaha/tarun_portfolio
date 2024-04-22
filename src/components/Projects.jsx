@@ -8,7 +8,7 @@ const Projects = forwardRef((prop, ref) => {
   const { darkmode} = useContext(Context);
   const firstHalfref = useRef()
   const secondHalfref = useRef()
-  useScroll(firstHalfref,"right-side-entry",1)
+  useScroll(firstHalfref,"left-side-entry",1)
   useScroll(secondHalfref,"left-side-entry",1)
   const mid = Math.floor(portfolioData.projects.length / 2);
   const firstHalf = portfolioData.projects.slice(0, mid);

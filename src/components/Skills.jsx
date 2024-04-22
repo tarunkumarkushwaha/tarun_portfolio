@@ -1,12 +1,10 @@
 import { forwardRef, useContext, useEffect, useState } from "react"
 import portfolioData from "../data/PortfolioData.js"
 import { Context } from "../MyContext";
-import { duration } from "@mui/material";
 
 const Skills = forwardRef((prop, ref) => {
   const [position, setposition] = useState(false)
   const { darkmode } = useContext(Context);
-  // console.log(position)
 
   const scrollFill = function () {
     let currentposition = ref.current.getBoundingClientRect().top

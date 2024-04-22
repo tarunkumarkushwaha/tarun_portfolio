@@ -30,7 +30,7 @@ function App() {
       {portfolioData ?
         <Context.Provider value={{ darkmode, setDarkmode }}>
           <Navbar skills={skills} home={home} about={about} contact={contact} projects={projects} />
-          <main className={`${darkmode ? "bg-slate-900" : "bg-blue-100"}`}>
+          <main className={`bg-gradient-to-tr ${darkmode ? " from-blue-950 via-blue-900 to-blue-800" : "from-blue-500 via-blue-400 to-blue-300"}`}>
             <Home ref={home} />
             <About ref={about} />
             <Skills ref={skills} />

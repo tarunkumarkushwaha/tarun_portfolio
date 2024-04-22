@@ -5,7 +5,7 @@ import useScroll from "../customhooks/useScroll.js";
 
 const Contact = forwardRef((prop, ref) => {
   const { darkmode } = useContext(Context);
-  useScroll(ref, "left-side-entry", 3)
+  useScroll(ref, "smooth-entry", 3)
   return (
     <>
       <div ref={ref} className="text-slate-100 p-[7%]">
