@@ -119,6 +119,7 @@ html {
   0% {
     transform: translate(-100px, 0);
     opacity: 0;
+    transition-timing-function: ease-in-out;
   }
 
   100% {
@@ -129,7 +130,7 @@ html {
 
 .smooth-entry {
   animation-name: entry;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
 
 @keyframes entry {
@@ -154,4 +155,12 @@ html {
 
 .blink {
   animation: cursor-blink 0.8s infinite;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }

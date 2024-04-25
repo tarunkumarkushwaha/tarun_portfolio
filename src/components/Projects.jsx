@@ -18,7 +18,7 @@ const Projects = forwardRef((prop, ref) => {
     <>
       <div></div>
       <div ref={ref} className="flex flex-col justify-center items-center">
-        <h1 className={` ${darkmode ? "text-slate-200" : "text-slate-800"} mt-16 p-10 text-2xl font-extrabold leading-none tracking-tight md:text-3xl lg:text-4xl text-center`}>Projects</h1>
+        <h1 className={`text-slate-200 mt-16 p-10 text-2xl font-extrabold leading-none tracking-tight md:text-3xl lg:text-4xl text-center`}>Projects</h1>
         <div ref={firstHalfref} className="flex flex-row flex-wrap gap-8 justify-center items-center py-10">
           {/* {portfolioData.projects.map((item,i)=>{return <ProjectCard key={i} item={item}/>})}  */}
           {firstHalf.map((item, i) => { return <ProjectCard key={i} item={item} /> })}

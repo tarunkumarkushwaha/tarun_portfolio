@@ -11,6 +11,8 @@ import { useEffect, useRef, useState } from 'react'
 import { Context } from "./MyContext";
 import Scroll from './components/Scroll'
 import CircularProgress from '@mui/material/CircularProgress';
+import darkbg from "./assets/Img/programming-unsplash.jpg"
+import lightbg from "./assets/Img/mainbg.jpg"
 
 function App() {
   const [darkmode, setDarkmode] = useState(true);
@@ -30,12 +32,17 @@ function App() {
       {portfolioData ?
         <Context.Provider value={{ darkmode, setDarkmode }}>
           <Navbar skills={skills} home={home} about={about} contact={contact} projects={projects} />
-          <main className={`bg-gradient-to-tr ${darkmode ? " from-blue-950 via-blue-900 to-blue-800" : "from-blue-500 via-blue-400 to-blue-300"}`}>
-            <Home ref={home} />
-            <About ref={about} />
-            <Skills ref={skills} />
-            <Projects ref={projects} />
-            <Contact ref={contact} />
+          <main
+            style={{ backgroundImage: `url(${darkmode ? darkbg : lightbg})` }}
+            className='parallax'
+          >
+            <section className="intro-wrapper bg-contain">
+              <Home ref={home} />
+              <About ref={about} />
+              <Skills ref={skills} />
+              <Projects ref={projects} />
+              <Contact ref={contact} />
+            </section>
           </main>
           <Foot />
           <Scroll home={home} />

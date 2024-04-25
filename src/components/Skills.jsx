@@ -24,13 +24,13 @@ const Skills = forwardRef((prop, ref) => {
   return (
     <>
       <div ref={ref}></div>
-      <h1 className={` ${darkmode ? "text-slate-200" : "text-slate-800"} mt-16 p-10 text-2xl font-extrabold leading-none tracking-tight md:text-3xl lg:text-4xl text-center`}>Skills</h1>
+      <h1 className={`text-slate-200 mt-16 p-10 text-2xl font-extrabold leading-none tracking-tight md:text-3xl lg:text-4xl text-center`}>Skills</h1>
       <div className="mx-auto px-4 w-2/3 flex flex-col justify-center items-center">
         {portfolioData.skillsSet.map((item, index) => {
           return <div key={index} className="w-full mb-4">
             <div className="pt-1">
-              <span className={`${darkmode ? "text-slate-200" : "text-slate-800"} pt-4`} style={{ float: "left" }}>{item.name}</span>
-              <span className={`${darkmode ? "text-slate-200" : "text-slate-800"} pt-4`} style={{ float: "right" }}>{item.percentage}%</span></div>
+              <span className={`text-slate-200 pt-4`} style={{ float: "left" }}>{item.name}</span>
+              <span className={`text-slate-200 pt-4`} style={{ float: "right" }}>{item.percentage}%</span></div>
             <div className="h-2 w-full rounded-md bg-slate-100 border border-black">
               <div className={`h-[6px] rounded-md ${darkmode ? "bg-blue-500" : "bg-blue-800"}`} >
               </div>

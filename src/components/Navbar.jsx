@@ -8,6 +8,7 @@ import portfolioData from "../data/PortfolioData"
 const Navbar = ({ skills, home, about, contact, projects }) => {
   const { darkmode, setDarkmode } = useContext(Context);
   const [menu, setmenu] = useState(false)
+  const [width, setwidth] = useState(false)
 
   let homeVisible = useElementIsVisible(home)
   let aboutVisible = useElementIsVisible(about)
@@ -17,6 +18,7 @@ const Navbar = ({ skills, home, about, contact, projects }) => {
 
   useEffect(() => {
     const handleResize = () => {
+      setwidth(window.innerWidth)
       if (window.innerWidth > 768) {
         setmenu(true)
       }
@@ -46,11 +48,11 @@ const Navbar = ({ skills, home, about, contact, projects }) => {
             {!darkmode ? <DarkMode /> : <LightMode />}
           </button>
           <div className="menu-items md:flex-row flex-col smooth-entry md:pr-16 pr-0" style={menu ? { display: "flex" } : { display: "none" }}>
-            <div onClick={() => {home.current.scrollIntoView(); setmenu(!menu)}} className={`${homeVisible && "on"} button`} >Home</div>
-            <div onClick={() => {about.current.scrollIntoView(); setmenu(!menu)}} className={`${aboutVisible && "on"} button aboutbtn`}>About</div>
-            <div onClick={() => {skills.current.scrollIntoView(); setmenu(!menu)}} className={`${skillsVisible && "on"} button contactbtn`}>Skills</div>
-            <div onClick={() => {projects.current.scrollIntoView(); setmenu(!menu)}} className={`${projectsVisible && "on"} button projectsbtn`}>Projects</div>
-            <div onClick={() => {contact.current.scrollIntoView(); setmenu(!menu)}} className={`${contactVisible && "on"} button contactbtn`}>Contact</div>
+            <div onClick={() => {home.current.scrollIntoView(); width < 768 && setmenu(!menu)}} className={`${homeVisible && "on"} button`} >Home</div>
+            <div onClick={() => {about.current.scrollIntoView(); width < 768 && setmenu(!menu)}} className={`${aboutVisible && "on"} button aboutbtn`}>About</div>
+            <div onClick={() => {skills.current.scrollIntoView(); width < 768 && setmenu(!menu)}} className={`${skillsVisible && "on"} button contactbtn`}>Skills</div>
+            <div onClick={() => {projects.current.scrollIntoView(); width < 768 && setmenu(!menu)}} className={`${projectsVisible && "on"} button projectsbtn`}>Projects</div>
+            <div onClick={() => {contact.current.scrollIntoView(); width < 768 && setmenu(!menu)}} className={`${contactVisible && "on"} button contactbtn`}>Contact</div>
             <a target="_blank" href="https://github.com/tarunkumarkushwaha" className='button contactbtn'>GitHub</a>
             {/* <button type="button" className="button">Resume</button> */}
 
