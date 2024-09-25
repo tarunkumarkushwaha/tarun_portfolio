@@ -1,14 +1,14 @@
-import Quiztime from '../assets/Img/Quiztime.png';
+import Quiztime from '../assets/Img/Productmanager.png';
 import Utilitybox from '../assets/Img/Utilitybox.png';
 import movieselector from '../assets/Img/movieselector.png';
-import Streamflowz from '../assets/Img/Streamflowz.png';
+import Streamflowz from '../assets/Img/Gelatomod.png';
 import quizotg from '../assets/Img/quizotg.png';
-import Funphoto from '../assets/Img/Funphoto.png';
+import Funphoto from '../assets/Img/videoeditor.png';
 
 
 const portfolioData = {
     name: "Tarun kushwaha",
-    profession: "Front-End Developer",
+    profession: "Full Stack Developer",
     skillsSet: [
         {
             "enabled": true,
@@ -82,28 +82,31 @@ const portfolioData = {
             "percentage": 98
         }
     ],
-    intro: "Previously, worked as an electrical maintenance engineer. After a career switch, learned web development independently and developed 6 independent projects. Also worked as a frontend developer at S7works for 1 year. Open to good opportunities",
+    intro: "I started my career as an electrical maintenance engineer before making a successful transition into web development, which I learned independently. Over the past few years, I have built and developed 3 independent projects, refining my skills along the way. I have also worked on two Next.js projects during my 1-year tenure as a frontend developer at S7works and another year as a freelance developer. I am passionate about web development and pride myself on being a self-driven, self-made developer.",
     projects: [
         {
             projectname: "Utility Box",
             description: "utility box is a multi-purpose web app. It has many useful features like notepad, calculator, and todos",
             liveurl: "https://utilityboxreactor.netlify.app/",
+            github:"https://github.com/tarunkumarkushwaha/reactor-using-vite",
             imagesrc: Utilitybox,
             serialno: 1,
             techstackused: "react, tailwind, css"
         },
         {
-            projectname: "Quiz Time",
-            description: "quiz time is a web app to test your JavaScript knowledge with features including improvement calculator",
-            liveurl: "https://quiztimejavascripttests.netlify.app/",
+            projectname: "Inventory Manager",
+            description: "A product inventory app to track active orders and manage inventory",
+            liveurl: "https://product-inventory-manager.vercel.app/",
+            github:"https://github.com/tarunkumarkushwaha/productInventoryManager",
             imagesrc: Quiztime,
             serialno: 2,
-            techstackused: "html, js, css"
+            techstackused: "React, Tanstack Query, Chakra UI."
         },
         {
             projectname: "Quiz OTG",
             description: "Quiz otg is a test app which lets you customise your test and questions",
             liveurl: "https://quizotg.netlify.app/",
+            github:"https://github.com/tarunkumarkushwaha/QuizOTGvite",
             imagesrc: quizotg,
             serialno: 3,
             techstackused: "react, tailwind, css"
@@ -112,25 +115,28 @@ const portfolioData = {
             projectname: "Movie selector",
             description: "Movie and show description site with details fetched from free API",
             liveurl: "https://selectyourshow.netlify.app/",
+            github:"https://github.com/tarunkumarkushwaha/QuizOTGvite",
             imagesrc: movieselector,
             serialno: 4,
             techstackused: "react, css"
         },
         {
-            projectname: "streamflowzz",
-            description: "online music player",
-            liveurl: "https://streamflowzz.netlify.app/",
+            projectname: "Gelato mod",
+            description: "react ui modified clone of gelato site",
+            liveurl: "https://gelato-mod-tarun.vercel.app/",
+            github:"https://github.com/tarunkumarkushwaha/gelato-mod-tarun",
             imagesrc: Streamflowz,
             serialno: 5,
-            techstackused: "html css js"
+            techstackused: "react tailwind"
         },
         {
-            projectname: "Funphoto",
-            description: "get your favourite image using unsplash from funphoto",
-            liveurl: "https://tarunkumarkushwaha.github.io/imagegenerator.github.io/",
+            projectname: "Video editor UI",
+            description: "UI for Discoflowzz, a video editor. Backend features are currently in development and will be added soon.",
+            liveurl: "https://disco-flowzz-tarun.vercel.app/",
+            github:"https://github.com/tarunkumarkushwaha/DiscoFlowzz",
             imagesrc: Funphoto,
             serialno: 5,
-            techstackused: "html css js"
+            techstackused: "react tailwind "
         },
     ],
     contact: {
