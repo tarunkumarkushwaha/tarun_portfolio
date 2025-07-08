@@ -1,22 +1,75 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { Context } from '../../MyContext';
-
 
 const ProjectCard = ({ item }) => {
     const { darkmode } = useContext(Context);
-    return (
-        <>
-            <div className='relative border border-white md:h-[26rem] h-[20rem] w-60 md:w-[19rem] p-2 hover:scale-105 duration-500 overflow-hidden bg-blue-200 text-blue-950 rounded-md shadow-blue-900 shadow-2xl'>
-                <p className='md:p-4 p-1 text-center md:text-2xl text-xl font-medium'>{item.projectname}</p>
-                <img className='mx-auto md:h-[35%] h-[25%] md:w-[95%] w-[85%] rounded-md' src={item.imagesrc} alt={item.projectname} />
-                <p className='md:p-4 p-1 text-center'>{item.description}</p>
-                <p className='md:text-center text-sm text-left absolute bottom-12 md:p-4 p-1'><span className='font-bold'>Build using -</span> {item.techstackused}</p>
-                <div className='absolute font-bold text-sm hover:scale-125 duration-500 bottom-0 left-[37%] w-20 m-4 bg-blue-200 cursor-pointer text-center shadow-blue-800 shadow-md mx-auto rounded-md border border-blue-100'><a target="_blank" rel="noopener"
-                    href={item.liveurl}>View</a>
-                </div>
-            </div>
-        </>
-    )
-}
 
-export default ProjectCard
+    return (
+        <div className='relative border border-white md:h-[28rem] h-[26rem] w-64 md:w-72 p-4 hover:scale-105 duration-300 bg-blue-200 text-blue-950 rounded-lg shadow-lg overflow-hidden flex flex-col'>
+   
+            <p className='text-center md:text-2xl text-xl font-semibold mb-2'>{item.projectname}</p>
+
+    
+            <img 
+                className='mx-auto md:h-40 h-32 w-full object-cover rounded-md' 
+                src={item.imagesrc} 
+                alt={item.projectname} 
+            />
+
+    
+            <p className='text-sm text-center mt-2 px-2 line-clamp-3'>{item.description}</p>
+
+        
+            <p className='text-sm font-semibold mt-3 text-center px-2'>
+                <span className='font-bold'>Built using:</span> {item.techstackused}
+            </p>
+
+    
+            <div className='mt-auto flex flex-wrap justify-center gap-2'>
+             
+                <a 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    href={item.liveurl} 
+                    className='w-24 py-2 text-sm font-bold text-center bg-blue-500 text-white hover:bg-blue-600 duration-300 rounded-md shadow-md'
+                >
+                    Live
+                </a>
+
+                {item.apkurl && (
+                    <a 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        href={item.apkurl} 
+                        className='w-24 py-2 text-sm font-bold text-center bg-green-500 text-white hover:bg-green-600 duration-300 rounded-md shadow-md'
+                    >
+                        APK
+                    </a>
+                )}
+
+                {item.storeurl && (
+                    <a 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        href={item.storeurl} 
+                        className='w-24 py-2 text-sm font-bold text-center bg-orange-500 text-white hover:bg-orange-600 duration-300 rounded-md shadow-md'
+                    >
+                        Store
+                    </a>
+                )}
+                {item.extension && (
+                    <a 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        href={item.extension} 
+                        className='w-24 py-2 text-sm font-bold text-center bg-orange-500 text-white hover:bg-orange-600 duration-300 rounded-md shadow-md'
+                    >
+                        Extension
+                    </a>
+                )}
+            </div>
+        </div>
+    );
+};
+
+export default ProjectCard;
