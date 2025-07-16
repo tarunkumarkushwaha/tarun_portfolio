@@ -53,7 +53,7 @@ const portfolioData = {
             description: "A multi-utility web application featuring a notepad, calculator, clock, dictionary, weather forecast, image search, and to-do list.",
             liveurl: "https://utilityboxreactor.netlify.app/",
             github: "https://github.com/tarunkumarkushwaha/reactor-using-vite",
-            extension:"https://github.com/tarunkumarkushwaha/utilitybox",
+            extension:"https://microsoftedge.microsoft.com/addons/detail/utility-tools-extension/odgcbccpihfaomfbdadmmgmonpomimch",
             imagesrc: Utilitybox,
             serialno: 3,
             techstackused: "React, Tailwind CSS"
