@@ -7,35 +7,35 @@ import Funphoto from '../assets/Img/videoeditor.png';
 
 const portfolioData = {
     name: "Tarun Kushwaha",
-    profession: "Frontend Developer & React Native Developer",
+    profession: "Frontend / Full-Stack JavaScript Developer",
     skillsSet: [
-        { "enabled": true, "name": "Figma", "sequence": 9, "percentage": 95 },
-        { "enabled": true, "name": "Node.js", "sequence": 8, "percentage": 92 },
-        { "enabled": true, "name": "MongoDB", "sequence": 10, "percentage": 70 },
-        { "enabled": true, "name": "Redux", "sequence": 7, "percentage": 95 },
+        { "enabled": true, "name": "HTML", "sequence": 1, "percentage": 98 },
+        { "enabled": true, "name": "CSS", "sequence": 2, "percentage": 97 },
         { "enabled": true, "name": "JavaScript", "sequence": 3, "percentage": 95 },
-        { "enabled": true, "name": "Git", "sequence": 5, "percentage": 95 },
-        { "enabled": true, "name": "GitHub", "sequence": 11, "percentage": 95 },
-        { "enabled": true, "name": "Expo", "sequence": 12, "percentage": 75 },
-        { "enabled": true, "name": "Next.js", "sequence": 7, "percentage": 90 },
+        { "enabled": true, "name": "Tailwind CSS", "sequence": 4, "percentage": 99 },
         { "enabled": true, "name": "React", "sequence": 5, "percentage": 90 },
         { "enabled": true, "name": "React Native", "sequence": 6, "percentage": 80 },
-        { "enabled": true, "name": "Tailwind CSS", "sequence": 4, "percentage": 99 },
-        { "enabled": true, "name": "CSS", "sequence": 2, "percentage": 97 },
-        { "enabled": true, "name": "HTML", "sequence": 1, "percentage": 98 }
+        { "enabled": true, "name": "Next.js", "sequence": 7, "percentage": 90 },
+        { "enabled": true, "name": "Redux", "sequence": 8, "percentage": 95 },
+        { "enabled": true, "name": "Node.js", "sequence": 9, "percentage": 92 },
+        { "enabled": true, "name": "MongoDB", "sequence": 10, "percentage": 70 },
+        { "enabled": true, "name": "Git", "sequence": 11, "percentage": 95 },
+        { "enabled": true, "name": "GitHub", "sequence": 12, "percentage": 95 },
+        { "enabled": true, "name": "Figma", "sequence": 13, "percentage": 95 },
+        { "enabled": true, "name": "Expo", "sequence": 14, "percentage": 75 }
     ],
-    intro: "I started my career as an electrical maintenance engineer before making a successful transition into web development, which I learned independently. Over the past few years, I have built and developed 3 independent projects, refining my skills along the way. I have also worked on two Next.js projects during my 3-year tenure as a frontend developer at S7works, flynt social and as a freelance developer. I am passionate about web development and pride myself on being a self-driven, self-made developer.",
+    intro: "I began my career as an Electrical Maintenance Engineer before making a successful transition into web development, which I learned independently. Over the past 2.5 years, I have worked as a Frontend / Full-Stack Developer at S7Works, Flynt Social, and as a freelancer, building production-ready apps. I have developed and published applications across web, mobile, and browser extensions, including two apps on the Amazon Appstore and a browser extension on the Microsoft Edge Store. I am passionate about creating impactful user experiences and pride myself on being a self-driven developer.",
     projects: [
         {
             projectname: "Quiz OTG",
-            description: "A test and quiz application featuring preloaded content for JavaScript, HTML, CSS, React, and more. Users can also create custom tests. Extended into an Android app using React Native and Expo.",
+            description: "A full-stack quiz platform available on web and Android. Features include preloaded quizzes, AI-powered question generation, CSV uploads, and responsive UI. Published on the Amazon Appstore.",
             liveurl: "https://quizotg.netlify.app/",
             apkurl: "https://drive.google.com/file/d/1jkw5TEG9nY0icfMUrEn4uHRpyFTih-kE/view?usp=drive_link",
             storeurl: "https://www.amazon.com/gp/product/B0DTB5FM28",
             github: "https://github.com/tarunkumarkushwaha/QuizOTGvite",
             imagesrc: quizotg,
             serialno: 1,
-            techstackused: "React, React Native, Tailwind CSS, Firebase"
+            techstackused: "React, React Native, Express.js, Tailwind CSS, Material UI"
         },
         {
             projectname: "Inventory Manager",
@@ -43,17 +43,15 @@ const portfolioData = {
             liveurl: "https://product-inventory-manager.vercel.app/",
             github: "https://github.com/tarunkumarkushwaha/productInventoryManager",
             imagesrc: Quiztime,
-            // storeurl:"",
-            // apkurl:"",
             serialno: 2,
             techstackused: "React, TanStack Query, Chakra UI"
         },
         {
             projectname: "Utility Box",
-            description: "A multi-utility web application featuring a notepad, calculator, clock, dictionary, weather forecast, image search, and to-do list.",
+            description: "A multi-utility React app (notepad, calculator, weather, dictionary, image search, to-do list). Also published as a browser extension on Microsoft Edge Store.",
             liveurl: "https://utilityboxreactor.netlify.app/",
             github: "https://github.com/tarunkumarkushwaha/reactor-using-vite",
-            extension:"https://microsoftedge.microsoft.com/addons/detail/utility-tools-extension/odgcbccpihfaomfbdadmmgmonpomimch",
+            extension: "https://microsoftedge.microsoft.com/addons/detail/utility-tools-extension/odgcbccpihfaomfbdadmmgmonpomimch",
             imagesrc: Utilitybox,
             serialno: 3,
             techstackused: "React, Tailwind CSS"
@@ -78,7 +76,7 @@ const portfolioData = {
         },
         {
             projectname: "T-connect",
-            description: "A UI demo for social media task manager",
+            description: "A UI demo for a social media task manager app.",
             liveurl: "https://t-connect-tarun.netlify.app/",
             github: "https://github.com/tarunkumarkushwaha/T-connect",
             imagesrc: Funphoto,
@@ -91,5 +89,6 @@ const portfolioData = {
         phone: "+91 7400744121"
     }
 };
+
 
 export default portfolioData
