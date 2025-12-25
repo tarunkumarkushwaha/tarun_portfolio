@@ -16,15 +16,14 @@ const Navbar = ({ skills, home, about, contact, projects }) => {
   let projectsVisible = useElementIsVisible(projects)
   let contactVisible = useElementIsVisible(contact)
 
-    const handleDownload = () => {
-      const fileUrl = "/assets/resume.pdf"; 
-      const link = document.createElement("a");
-      link.href = fileUrl;
-      link.download = "resume.pdf"; 
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    };
+  const handleDownload = () => {
+    const fileUrl = "https://drive.google.com/file/d/1i6pStZ_srxktQzNP6jzkn01sLQ56iDa9/view?usp=drive_link";
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -58,11 +57,11 @@ const Navbar = ({ skills, home, about, contact, projects }) => {
             {!darkmode ? <DarkMode /> : <LightMode />}
           </button>
           <div className="menu-items md:flex-row flex-col smooth-entry md:pr-16 pr-0" style={menu ? { display: "flex" } : { display: "none" }}>
-            <div onClick={() => {home.current.scrollIntoView(); width < 768 && setmenu(!menu)}} className={`${homeVisible && "on"} button`} ><p className="button-content">Home</p></div>
-            <div onClick={() => {about.current.scrollIntoView(); width < 768 && setmenu(!menu)}} className={`${aboutVisible && "on"} button aboutbtn`}><p className="button-content">About</p></div>
-            <div onClick={() => {skills.current.scrollIntoView(); width < 768 && setmenu(!menu)}} className={`${skillsVisible && "on"} button contactbtn`}><p className="button-content">Skills</p></div>
-            <div onClick={() => {projects.current.scrollIntoView(); width < 768 && setmenu(!menu)}} className={`${projectsVisible && "on"} button projectsbtn`}><p className="button-content">Projects</p></div>
-            <div onClick={() => {contact.current.scrollIntoView(); width < 768 && setmenu(!menu)}} className={`${contactVisible && "on"} button contactbtn`}><p className="button-content">Contact</p></div>
+            <div onClick={() => { home.current.scrollIntoView(); width < 768 && setmenu(!menu) }} className={`${homeVisible && "on"} button`} ><p className="button-content">Home</p></div>
+            <div onClick={() => { about.current.scrollIntoView(); width < 768 && setmenu(!menu) }} className={`${aboutVisible && "on"} button aboutbtn`}><p className="button-content">About</p></div>
+            <div onClick={() => { projects.current.scrollIntoView(); width < 768 && setmenu(!menu) }} className={`${projectsVisible && "on"} button projectsbtn`}><p className="button-content">Projects</p></div>
+            <div onClick={() => { skills.current.scrollIntoView(); width < 768 && setmenu(!menu) }} className={`${skillsVisible && "on"} button contactbtn`}><p className="button-content">Skills</p></div>
+            <div onClick={() => { contact.current.scrollIntoView(); width < 768 && setmenu(!menu) }} className={`${contactVisible && "on"} button contactbtn`}><p className="button-content">Contact</p></div>
             <a target="_blank" href="https://github.com/tarunkumarkushwaha" className='button contactbtn'><p className="button-content">GitHub</p></a>
             <button onClick={handleDownload} className='button contactbtn'><p className="button-content">Resume</p></button>
 

@@ -1,12 +1,13 @@
-import Quiztime from '../assets/Img/Productmanager.png';
 import Utilitybox from '../assets/Img/Utilitybox.png';
 import movieselector from '../assets/Img/movieselector.png';
-import Streamflowz from '../assets/Img/Gelatomod.png';
+import gamebox from '../assets/Img/gamebox.png';
 import quizotg from '../assets/Img/quizotg.png';
 import Funphoto from '../assets/Img/videoeditor.png';
+import filemanager from "../assets/Img/filemanager.png"
 
 const portfolioData = {
     name: "Tarun Kushwaha",
+    resume:"https://drive.google.com/file/d/1i6pStZ_srxktQzNP6jzkn01sLQ56iDa9/view?usp=drive_link",
     profession: "Frontend / Full-Stack JavaScript Developer",
     skillsSet: [
         { "enabled": true, "name": "HTML", "sequence": 1, "percentage": 98 },
@@ -35,25 +36,28 @@ const portfolioData = {
             github: "https://github.com/tarunkumarkushwaha/QuizOTGvite",
             imagesrc: quizotg,
             serialno: 1,
+            backendrepo:"https://github.com/tarunkumarkushwaha/QuizTimeQuestionAPI",
             techstackused: "React, React Native, Express.js, Tailwind CSS, Material UI"
         },
         {
-            projectname: "Inventory Manager",
-            description: "A product inventory management application to track active orders and inventory levels efficiently.",
-            liveurl: "https://product-inventory-manager.vercel.app/",
-            github: "https://github.com/tarunkumarkushwaha/productInventoryManager",
-            imagesrc: Quiztime,
+            projectname: "Gamebox",
+            description: "A react native game with mini games like simon game, snake water gun, Rock Paper Scissors, craco teeth(comming soon), etc. Note: web preveiw may contain fewer games.",
+            liveurl: "https://gamebox--w0pjpgmldq.expo.app",
+            github: "https://github.com/tarunkumarkushwaha/memoriseThis",
+            imagesrc: gamebox,
             serialno: 2,
-            techstackused: "React, TanStack Query, Chakra UI"
+            backendrepo:"",
+            techstackused: "React Native"
         },
         {
             projectname: "Utility Box",
-            description: "A multi-utility React app (notepad, calculator, weather, dictionary, image search, to-do list). Also published as a browser extension on Microsoft Edge Store.",
+            description: "A multi-utility React app with everyday tools in one place.Includes a notepad, calendar, task manager, JSON formatter, bar graphs and pie charts generator, age calculator , reminder and countdown timer.The browser extension version adds tools like color picker and regex editor.",
             liveurl: "https://utilityboxreactor.netlify.app/",
             github: "https://github.com/tarunkumarkushwaha/reactor-using-vite",
             extension: "https://microsoftedge.microsoft.com/addons/detail/utility-tools-extension/odgcbccpihfaomfbdadmmgmonpomimch",
             imagesrc: Utilitybox,
             serialno: 3,
+            backendrepo:"",
             techstackused: "React, Tailwind CSS"
         },
         {
@@ -63,15 +67,17 @@ const portfolioData = {
             github: "https://github.com/tarunkumarkushwaha/selectyourshow",
             imagesrc: movieselector,
             serialno: 4,
+            backendrepo:"",
             techstackused: "React, CSS"
         },
         {
-            projectname: "Gelato Mod",
-            description: "A modified UI clone of the Gelato website with an improved layout.",
-            liveurl: "https://gelato-mod-tarun.vercel.app/",
-            github: "https://github.com/tarunkumarkushwaha/gelato-mod-tarun",
-            imagesrc: Streamflowz,
+            projectname: "FileFolder",
+            description: "Frontend of file manager app.",
+            liveurl: "https://filefolder-one.vercel.app/",
+            github: "https://github.com/tarunkumarkushwaha/filefolder",
+            imagesrc: filemanager,
             serialno: 5,
+            backendrepo:"",
             techstackused: "React, Tailwind CSS"
         },
         {
@@ -81,6 +87,7 @@ const portfolioData = {
             github: "https://github.com/tarunkumarkushwaha/T-connect",
             imagesrc: Funphoto,
             serialno: 6,
+            backendrepo:"",
             techstackused: "React, Tailwind CSS"
         }
     ],

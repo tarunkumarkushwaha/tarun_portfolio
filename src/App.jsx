@@ -39,8 +39,8 @@ function App() {
             <section className="intro-wrapper bg-contain">
               <Home ref={home} />
               <About ref={about} />
-              <Skills ref={skills} />
               <Projects ref={projects} />
+              <Skills ref={skills} />
               <Contact ref={contact} />
             </section>
           </main>
