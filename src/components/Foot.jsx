@@ -7,7 +7,7 @@ const Foot = () => {
   return (
     <>
       <div className={` ${darkmode ? "bg-blue-950 text-slate-100" : "bg-blue-300 text-slate-900"}`}>
-        <p className="text-center font-extralight">&copy; 2024 {portfolioData.name}</p>
+        <p className="text-center font-extralight">&copy; 2026 {portfolioData.name}</p>
       </div>
     </>
   )

@@ -1,24 +1,31 @@
-import { useEffect,useState } from 'react'
-// ref is element and position is output 
+import { useEffect, useState } from "react";
+
 const useElementIsVisible = (ref) => {
-    const [position, setposition] = useState(false)
-   
-    let elementHeight = ref.current ? ref.current.clientHeight : 500 ;  // need fixing
-    // console.log(elementHeight)  
+  const [isVisible, setIsVisible] = useState(false);
+// console.log(ref.current,"refef")
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
 
-    const trackPosition = function () {
-        let currentposition = ref.current.getBoundingClientRect().top
-        setposition(currentposition < window.innerHeight / 1.15 && currentposition + window.innerHeight > elementHeight)
-    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        root:null,
+        threshold: 0.2,
+        rootMargin: "0px",
+      },
+    );
 
-    useEffect(() => {
-        trackPosition();
-        window.removeEventListener('scroll', trackPosition);
-        window.addEventListener('scroll', trackPosition, { passive: true });
-        return () => window.removeEventListener('scroll', trackPosition);
-    }, []);
+    observer.observe(element);
 
-    return position
-}
+    return () => {
+      if (element) observer.unobserve(element);
+    };
+  }, [ref]);
 
-export default useElementIsVisible
+  return isVisible;
+};
+
+export default useElementIsVisible;

@@ -1,45 +1,49 @@
-import { forwardRef, useContext, useEffect, useState } from "react"
-import portfolioData from "../data/PortfolioData.js"
+import { forwardRef, useContext } from "react";
+import portfolioData from "../data/PortfolioData.js";
 import { Context } from "../MyContext";
 import useElementIsVisible from "../customhooks/useElementIsVisible.js";
 
 const Skills = forwardRef((prop, ref) => {
   const { darkmode } = useContext(Context);
-  let position = useElementIsVisible(ref)
-
-  useEffect(() => {
-    if (position) {
-      for (let index = 0; index < portfolioData.skillsSet.length; index++) {
-        let targetWidth = portfolioData.skillsSet[index].percentage
-        let progressWidth = 0
-        const intervalId = setInterval(() => {
-          progressWidth = progressWidth + 1
-          if (progressWidth >= targetWidth) clearInterval(intervalId);
-          ref.current.nextSibling.nextSibling.childNodes[index].childNodes[1].childNodes[0].style.width = progressWidth + "%"
-        }, 25);
-      }
-    }
-  }, [position]);
+  const isVisible = useElementIsVisible(ref);
 
   return (
-    <>
-      <div ref={ref}></div>
-      <h1 className={`text-slate-200 mt-16 p-10 text-2xl font-extrabold leading-none tracking-tight md:text-3xl lg:text-4xl text-center`}>Skills</h1>
-      <div className="mx-auto px-4 w-2/3 flex flex-col justify-center items-center">
-        {portfolioData.skillsSet.map((item, index) => {
-          return <div key={index} className="w-full mb-4">
-            <div className="pt-1">
-              <span className={`text-slate-200 pt-4`} style={{ float: "left" }}>{item.name}</span>
-              <span className={`text-slate-200 pt-4`} style={{ float: "right" }}>{item.percentage}%</span></div>
-            <div className="h-2 w-full rounded-md bg-slate-100 border border-black">
-              <div className={`h-[6px] rounded-md ${darkmode ? "bg-blue-500" : "bg-blue-800"}`} >
-              </div>
+    <section ref={ref} className="py-20 px-6">
+
+      <div className="text-center mb-16">
+        <h2 className={`text-3xl md:text-5xl font-black tracking-tighter mb-2 ${darkmode ? "text-white" : "text-slate-900"}`}>
+          Technical Proficiency
+        </h2>
+        <div className="h-1.5 w-20 bg-blue-500 mx-auto rounded-full" />
+      </div>
+
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+        {portfolioData.skillsSet.map((item, index) => (
+          <div key={index} className="w-full">
+            <div className="flex justify-between items-end mb-2">
+              <span className={`font-bold tracking-tight ${darkmode ? "text-slate-200" : "text-slate-700"}`}>
+                {item.name}
+              </span>
+              <span className="text-sm font-mono text-blue-500 font-bold">
+                {item.percentage}%
+              </span>
+            </div>
+            
+
+            <div className={`h-3 w-full rounded-full overflow-hidden border ${darkmode ? "bg-slate-800 border-white/5" : "bg-slate-100 border-slate-200"}`}>
+  
+              <div 
+                className={`h-full rounded-full transition-all duration-1000 ease-out ${darkmode ? "bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)]" : "bg-blue-600"}`}
+                style={{ 
+                  width: isVisible ? `${item.percentage}%` : "0%" 
+                }}
+              />
             </div>
           </div>
-        })}
+        ))}
       </div>
-    </>
-  )
-}
-)
-export default Skills
+    </section>
+  );
+});
+
+export default Skills;
