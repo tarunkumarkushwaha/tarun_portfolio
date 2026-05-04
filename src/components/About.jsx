@@ -37,24 +37,24 @@ const About = forwardRef((prop, ref) => {
           </span>
 
           <p
-            className={`text-lg md:text-xl leading-relaxed text-center lg:text-left
+            className={`text-lg zoom md:text-xl leading-relaxed text-center lg:text-left
             ${darkmode ? "text-slate-300" : "text-slate-700"}`}
           >
             {portfolioData.aboutme}
           </p>
           <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-6 pt-10 border-t border-slate-500/20">
             <div className="flex flex-col">
-              <span className="text-blue-500 font-bold text-2xl">3+</span>
+              <span className="text-blue-500 zoom font-bold text-2xl">2+</span>
               <span
-                className={`text-xs uppercase tracking-widest font-semibold ${darkmode ? "text-slate-500" : "text-slate-400"}`}
+                className={`text-xs zoom uppercase tracking-widest font-semibold ${darkmode ? "text-slate-500" : "text-slate-400"}`}
               >
                 Years Experience
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-emerald-500 font-bold text-2xl">15+</span>
+              <span className="text-emerald-500 zoom font-bold text-2xl">15+</span>
               <span
-                className={`text-xs uppercase tracking-widest font-semibold ${darkmode ? "text-slate-500" : "text-slate-400"}`}
+                className={`text-xs zoom uppercase tracking-widest font-semibold ${darkmode ? "text-slate-500" : "text-slate-400"}`}
               >
                 Projects Built
               </span>

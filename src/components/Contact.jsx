@@ -9,7 +9,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Contact = forwardRef((prop, ref) => {
   const { darkmode } = useContext(Context);
-  useScroll(ref, "smooth-entry", 3);
+  useScroll(ref, "animate-fadeInUp", 3);
 
   const contactInfo = [
     {

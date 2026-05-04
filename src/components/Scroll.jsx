@@ -68,7 +68,7 @@ const Scroll = ({ home }) => {
                     {scrollPercentage}%
                 </span>
 
-                <div className="absolute -top-10 scale-0 group-hover:scale-100 transition-all duration-200 bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded shadow-lg uppercase">
+                <div className="absolute animate-bounce -top-10 scale-0 group-hover:scale-100 transition-all duration-200 bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded shadow-lg uppercase">
                     Top
                 </div>
             </div>

@@ -4,11 +4,10 @@ import { Context } from '../../MyContext';
 const ProjectCard = ({ item }) => {
   const { darkmode } = useContext(Context);
 
-  // Split tech stack string into an array if it's comma-separated
   const techTags = item.techstackused ? item.techstackused.split(',') : [];
 
   return (
-    <div className={`group relative flex flex-col h-[500px] rounded-3xl border transition-all duration-500 
+    <div className={`group relative flex flex-col h-[500px] rounded-3xl border transition-all duration-500  hover:scale-105
       ${darkmode 
         ? "bg-slate-900/40 border-white/10 hover:border-blue-500/50 shadow-2xl shadow-blue-900/10" 
         : "bg-white border-slate-200 hover:border-blue-400 shadow-xl shadow-slate-200/50"} 

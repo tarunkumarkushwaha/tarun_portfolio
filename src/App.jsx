@@ -55,7 +55,7 @@ function App() {
 
             <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <section className="space-y-24 md:space-y-48 py-20">
-                <Home ref={home} />
+                <Home ref={home} projects={projects} />
                 <About ref={about} />
                 <Projects ref={projects} />
                 <Skills ref={skills} />

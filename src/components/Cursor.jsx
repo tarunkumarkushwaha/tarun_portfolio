@@ -16,6 +16,8 @@ const Cursor = () => {
       const target = e.target;
       const isHoverable = target.closest('.zoom') || 
                           target.closest('button') || 
+                          target.closest('h1') || 
+                          target.closest('h2') || 
                           target.closest('a');
 
       if (isHoverable) {

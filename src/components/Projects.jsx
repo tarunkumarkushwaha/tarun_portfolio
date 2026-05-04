@@ -7,7 +7,7 @@ import useScroll from "../customhooks/useScroll.js";
 const Projects = forwardRef((prop, ref) => {
   const { darkmode } = useContext(Context);
 
-  useScroll(ref, "smooth-entry", 1);
+  useScroll(ref, "animate-fadeInUp", 1);
 
   const mid = Math.floor(portfolioData.projects.length / 2);
   const featureProjects = portfolioData.projects.slice(0, mid);
