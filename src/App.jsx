@@ -13,6 +13,7 @@ import Scroll from "./components/Scroll";
 import CircularProgress from "@mui/material/CircularProgress";
 import darkbg from "./assets/Img/programming-unsplash.jpg";
 import lightbg from "./assets/Img/mainbg.jpg";
+import Cursor from "./components/Cursor.jsx";
 
 function App() {
   const [darkmode, setDarkmode] = useState(true);
@@ -25,7 +26,6 @@ function App() {
   useEffect(() => {
     document.title = portfolioData ? portfolioData.name : "loading";
   }, []);
-
 
   return (
     <>
@@ -63,6 +63,7 @@ function App() {
               </section>
             </div>
           </main>
+          <Cursor />
           <Foot />
           <Scroll home={home} />
         </Context.Provider>
