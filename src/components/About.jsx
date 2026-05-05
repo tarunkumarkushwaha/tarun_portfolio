@@ -44,7 +44,7 @@ const About = forwardRef((prop, ref) => {
           </p>
           <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-6 pt-10 border-t border-slate-500/20">
             <div className="flex flex-col">
-              <span className="text-blue-500 zoom font-bold text-2xl">2+</span>
+              <span className="text-blue-500 zoom font-bold text-2xl">3+</span>
               <span
                 className={`text-xs zoom uppercase tracking-widest font-semibold ${darkmode ? "text-slate-500" : "text-slate-400"}`}
               >

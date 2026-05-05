@@ -35,7 +35,7 @@ const Home = forwardRef((prop, ref) => {
             {portfolioData.intro}
           </p>
 
-          <div className="mt-4 flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400">
+          {/* <div className="mt-4 flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400">
             <div
               className={`flex items-center gap-2 px-4 py-2 rounded-full border backdrop-blur-md transition-all duration-300 hover:scale-105 ${darkmode ? "bg-white/5 border-white/10 text-slate-300" : "bg-slate-100 border-slate-200 text-slate-700"}`}
             >
@@ -71,7 +71,7 @@ const Home = forwardRef((prop, ref) => {
                 AI-powered Features
               </span>
             </div>
-          </div>
+          </div> */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <button
               onClick={() =>

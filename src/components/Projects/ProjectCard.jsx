@@ -13,7 +13,7 @@ const ProjectCard = ({ item }) => {
         : "bg-white border-slate-200 hover:border-blue-400 shadow-xl shadow-slate-200/50"} 
       hover:-translate-y-2 overflow-hidden`}
     >
-      {/* Image Container with Overlay */}
+      
       <div className="relative h-48 w-full overflow-hidden">
         <img
           src={item.imagesrc}
@@ -25,25 +25,23 @@ const ProjectCard = ({ item }) => {
         </div>
       </div>
 
-      {/* Content */}
+
       <div className="flex flex-col flex-1 p-6">
         <h3 className={`text-xl font-bold mb-3 ${darkmode ? "text-white" : "text-slate-900"}`}>
           {item.projectname}
         </h3>
 
-        {/* Description with Tooltip Logic */}
         <div className="relative group/desc mb-4">
           <p className={`text-sm line-clamp-3 leading-relaxed ${darkmode ? "text-slate-400" : "text-slate-600"}`}>
             {item.description}
           </p>
-          {/* Enhanced Tooltip */}
+
           <div className="pointer-events-none absolute bottom-full left-0 mb-2 w-full scale-95 opacity-0 rounded-xl 
             bg-slate-800 text-white text-xs p-4 shadow-2xl transition-all duration-200 group-hover/desc:opacity-100 group-hover/desc:scale-100 border border-white/10 z-50">
             {item.description}
           </div>
         </div>
 
-        {/* Tech Stack Badges */}
         <div className="flex flex-wrap gap-2 mb-6">
           {techTags.map((tech, idx) => (
             <span key={idx} className={`text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider
@@ -53,47 +51,46 @@ const ProjectCard = ({ item }) => {
           ))}
         </div>
 
-        {/* Action Buttons */}
         <div className="mt-auto flex flex-wrap gap-3">
           {item.liveurl && (
             <a href={item.liveurl} target="_blank" rel="noreferrer" 
                className="flex-1 text-center py-2 text-xs font-bold rounded-xl bg-blue-600 text-white hover:bg-blue-500 transition-colors shadow-lg shadow-blue-600/20">
-              Live Demo
+              Live
             </a>
           )}
           {item.github && (
             <a href={item.github} target="_blank" rel="noreferrer"
                className={`px-4 py-2 text-xs font-bold rounded-xl border transition-all
                ${darkmode ? "border-white/10 text-white hover:bg-white/10" : "border-slate-200 text-slate-700 hover:bg-slate-50"}`}>
-              Code
+              Github
             </a>
           )}
           {item.backendrepo && (
             <a href={item.backendrepo} target="_blank" rel="noreferrer"
                className={`px-4 py-2 text-xs font-bold rounded-xl border transition-all
                ${darkmode ? "border-white/10 text-white hover:bg-white/10" : "border-slate-200 text-slate-700 hover:bg-slate-50"}`}>
-              Code
+              Backend
             </a>
           )}
           {item.apkurl && (
             <a href={item.apkurl} target="_blank" rel="noreferrer"
                className={`px-4 py-2 text-xs font-bold rounded-xl border transition-all
                ${darkmode ? "border-white/10 text-white hover:bg-white/10" : "border-slate-200 text-slate-700 hover:bg-slate-50"}`}>
-              Code
+              Apk
             </a>
           )}
           {item.extension && (
             <a href={item.extension} target="_blank" rel="noreferrer"
                className={`px-4 py-2 text-xs font-bold rounded-xl border transition-all
                ${darkmode ? "border-white/10 text-white hover:bg-white/10" : "border-slate-200 text-slate-700 hover:bg-slate-50"}`}>
-              Code
+              Extension
             </a>
           )}
           {item.storeurl && (
             <a href={item.storeurl} target="_blank" rel="noreferrer"
                className={`px-4 py-2 text-xs font-bold rounded-xl border transition-all
                ${darkmode ? "border-white/10 text-white hover:bg-white/10" : "border-slate-200 text-slate-700 hover:bg-slate-50"}`}>
-              Code
+              Store
             </a>
           )}
         </div>

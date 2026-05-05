@@ -51,7 +51,7 @@ const Projects = forwardRef((prop, ref) => {
         ))}
       </div>
 
-      <SectionHeading>User Interface Projects</SectionHeading>
+      <SectionHeading>Other Projects</SectionHeading>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {uiProjects.map((item, i) => (
           <ProjectCard key={`ui-${i}`} item={item} />
