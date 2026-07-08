@@ -4,6 +4,7 @@ import gamebox from "../assets/Img/gamebox.png";
 import quizotg from "../assets/Img/quizotg.png";
 import Funphoto from "../assets/Img/videoeditor.png";
 import tchat from "../assets/Img/tchat.png";
+import Lava from "../assets/Img/lava.png";
 
 const portfolioData = {
   name: "Tarun Kushwaha",
@@ -56,17 +57,15 @@ const portfolioData = {
       techstackused: "React Native, Expo",
     },
     {
-      projectname: "Utility Box – Multi-Utility Productivity App",
+      projectname: "Lavamesh – Local first Project manager App",
       description:
-        "A productivity-focused platform combining multiple tools like JSON formatter, regex tester, calendar, notepad, and data visualization. Also available as a browser extension for quick access.",
-      liveurl: "https://utilityboxreactor.netlify.app/",
-      github: "https://github.com/tarunkumarkushwaha/reactor-using-vite",
-      extension:
-        "https://microsoftedge.microsoft.com/addons/detail/utility-tools-extension/odgcbccpihfaomfbdadmmgmonpomimch",
-      imagesrc: Utilitybox,
+        "a real-time project collaboration platform for centralized project management and team coordination. With live updates using Socket.io, role-based workflows, project approvals, and collaborative task management. local JSON backup functionality, allowing project data to be exported and restored without relying on third-party services..",
+      liveurl: "https://lavamesh.vercel.app/",
+      github: "https://github.com/tarunkumarkushwaha/lavamesh",
+      imagesrc: Lava,
       serialno: 3,
       backendrepo: "",
-      techstackused: "React, Tailwind CSS",
+      techstackused: "Next.js, Socket.io",
     },
     {
       projectname: "YouTube Analytics – Data Insights Dashboard",
@@ -91,16 +90,29 @@ const portfolioData = {
       techstackused: "React, Socket.io, Node.js, Express.js, MongoDB",
     },
     {
-      projectname: "T-Connect – Social Dashboard UI",
+      projectname: "Utility Box – Multi-Utility Productivity App",
       description:
-        "A modern UI-focused web application inspired by social and task management platforms, featuring responsive layouts, custom components, and smooth user interactions.",
-      liveurl: "https://t-connect-tarun.netlify.app/",
-      github: "https://github.com/tarunkumarkushwaha/T-connect",
-      imagesrc: Funphoto,
-      serialno: 6,
+        "A productivity-focused platform combining multiple tools like JSON formatter, regex tester, calendar, notepad, and data visualization. Also available as a browser extension for quick access.",
+      liveurl: "https://utilityboxreactor.netlify.app/",
+      github: "https://github.com/tarunkumarkushwaha/reactor-using-vite",
+      extension:
+        "https://microsoftedge.microsoft.com/addons/detail/utility-tools-extension/odgcbccpihfaomfbdadmmgmonpomimch",
+      imagesrc: Utilitybox,
+      serialno: 3,
       backendrepo: "",
       techstackused: "React, Tailwind CSS",
-    },
+    }
+    // {
+    //   projectname: "T-Connect – Social Dashboard UI",
+    //   description:
+    //     "A modern UI-focused web application inspired by social and task management platforms, featuring responsive layouts, custom components, and smooth user interactions.",
+    //   liveurl: "https://t-connect-tarun.netlify.app/",
+    //   github: "https://github.com/tarunkumarkushwaha/T-connect",
+    //   imagesrc: Funphoto,
+    //   serialno: 6,
+    //   backendrepo: "",
+    //   techstackused: "React, Tailwind CSS",
+    // },
   ],
   contact: {
     email: "tkk.tarunkushwaha05@gmail.com",
