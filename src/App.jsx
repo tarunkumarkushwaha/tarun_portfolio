@@ -24,6 +24,23 @@ function App() {
   const contact = useRef(null);
 
   useEffect(() => {
+    fetch("/.netlify/functions/track", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        page: window.location.pathname,
+        screen: `${screen.width}x${screen.height}`,
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        referrer: document.referrer,
+        userAgent: navigator.userAgent,
+      }),
+    });
+  }, []);
+
+  useEffect(() => {
     document.title = portfolioData ? portfolioData.name : "loading";
   }, []);
 

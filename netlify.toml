@@ -1,0 +1,8 @@
+[build]
+functions = "netlify/functions"
+
+# For React CRA
+publish = "build"
+
+# For Vite use
+# publish = "dist"

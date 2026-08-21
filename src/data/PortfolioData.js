@@ -28,7 +28,7 @@ const portfolioData = {
   intro:
     "I build scalable web, extensions and mobile applications with clean UI, strong performance, and real-world usability — from idea to deployment.",
   aboutme:
-    "I began my career as an Electrical Maintenance Engineer before making a successful transition into web development, which I learned independently. Over the past 2.5 years, I have worked as a Frontend / Full-Stack Developer at S7Works, Flynt Social, and as a freelancer, building production-ready apps. I have developed and published applications across web, mobile, and browser extensions, including two apps on the Amazon Appstore and a browser extension on the Microsoft Edge Store. I am passionate about creating impactful user experiences and pride myself on being a self-driven developer.",
+    "I began my career as an Electrical Maintenance Engineer before making a successful transition into web development, which I learned independently. I have worked as a Frontend / Full-Stack Developer at S7Works, Flynt Social, and as a freelancer, building production-ready apps. I have developed and published applications across web, mobile, and browser extensions, including two apps on the Amazon Appstore and a browser extension on the Microsoft Edge Store. I am passionate about creating impactful user experiences and pride myself on being a self-driven developer.",
   projects: [
     {
       projectname: "Quiz OTG – Full-Stack Quiz Platform",
